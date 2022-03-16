@@ -1,7 +1,0 @@
-FROM builder1 as builder
-RUN luarocks install luacrypto
-
-# Copy build output to image
-COPY --from=builder /usr/src/app/platform/viewer/dist /var/www/html
-
-ENTRYPOINT ["/usr/local/openresty/nginx/sbin/nginx", "-g", "daemon off;"]
