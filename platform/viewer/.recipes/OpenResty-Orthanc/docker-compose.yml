@@ -24,8 +24,7 @@ services:
       # - letsencrypt_certificates:/etc/letsencrypt
       # - letsencrypt_challenges:/var/www/letsencrypt
     ports:
-      - '443:443' # SSL
-      - '80:80' # Web
+      - '81:80' # Web
     depends_on:
       - orthanc
     restart: on-failure
